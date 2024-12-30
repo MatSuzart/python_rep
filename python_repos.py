@@ -16,7 +16,10 @@ print(f"Complete results: {not response_dict['incomplete_results']}")
 #Explora informações sobre os repositórios
 repo_dicts = response_dict['items']
 print(f"Repositories returned:{len(repo_dicts)}")
-
+print("\nSelected information about first repository:")
+print(f"Name:{repo_dicts['name']}")
+print(f"Owner:{repo_dicts['owner']['login']}")
+print(f"Description:{repo_dicts['description']}")
 #examina o primeiro repositório
 repo_dicts = repo_dicts[0]
 print(f"\nKeys:{len(repo_dicts)}")
