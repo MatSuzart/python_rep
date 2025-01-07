@@ -24,7 +24,10 @@ for repo_dict in repo_dicts:
     repo_names.append(repo_dict['name'])
     stars.append(repo_dict['stargazers_count'])
     #Cria a visualização
-    fig = px.bar(x=repo_names,y=stars)
+    title = "Most-Starred Python Projects on GitHub"
+    labels = {'x':'Repository', 'y':'Stars'}
+    fig = px.bar(x=repo_names,y=stars, title= title, labels=labels)
+    fig.update_layout(title_font_size=28, xaxis_title_font_size=20,yaxis_title_font_size=20)
     fig.show()
 
     print(f"Name:{repo_dict['name']}")
